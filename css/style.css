@@ -1,0 +1,67 @@
+*{
+	margin: 0; /*elimina todos los margenes de nuestra pagina*/
+	padding: 0; /*el contenido no tocara los bordes de su contenedor*/
+	box-sizing: border-box;  /*hace que todos los elementos se contengan dentro de sus contenedores padres*/
+}
+
+body{
+	font-family: 'Cormorant Garamond', serif;
+}
+
+/*coloca el color de fondo del menu*/
+.ewk_navbar{
+	background-color: rgba(255,255,255,0.7) !important; /*esto hace que esta clase sea mas importante sobre las otras*/
+}
+/*le aplica transparencia al menu*/
+.ewk_navbar div,
+.ewk_navbar ul {
+	background-color: transparent !important;
+}
+
+.ewk_cont_sec_1{
+	padding: 10%;
+}
+
+.ewk_cont_sec_1 hr{
+	border-top: 1px solid rgba(1,1,1,0.3); /*hcrea un grosor solido y de color negro para la linea*/
+}
+
+.ewk_cont_sec_1_link{
+	padding: 5%;
+}
+
+.ewk_cont_sec_1_link a{
+	width: 200px; /*hace que el texto tenga un tama;o fijo sin importar la pantalla*/
+}
+
+.ewk_img_pre{
+	width: 100px;
+	height: 100px;
+}
+
+.icon-facebook-rect,
+.icon-youtube,
+.icon-linkedin-rect,
+.icon-instagram-filled,
+.icon-gmail,
+.icon-gplus{
+	color: #0C96B8;
+	font-size: 25px;
+}
+
+.ewk_cont_footer{
+	background-color: rgba(1,1,1,0.7);
+	color: #FFFFFF;
+	padding: 10%;
+	margin-top: 100px;
+}
+
+.ewk_cont_footer a{
+	color: #FFFFFF;
+	text-decoration: none;
+	display: block;
+}
+
+.ewk_cont_img_footer{
+	padding: 5%;
+}

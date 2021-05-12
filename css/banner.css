@@ -2,7 +2,7 @@
 
 /*alto del contenedor,  con vh toma el alto de la pantalla*/
 .ewk_cont_banner{ 
-	height: 100vh;  /*alto del contenedor*/
+	height: 100vh;  /*alto del contenedor va a tomar el alto de la pantalla sin importar el dispositivo*/
 	background-attachment: fixed; /*indicamos que la imagen quede fija en el fondo*/
 	background-position: center;  /*indicamos que la imagen de fondo quede centrada*/
 	background-repeat: no-repeat; /*indicar que la imagen de fondo no se repeat*/
@@ -25,6 +25,7 @@
 	background-color: rgba(0,0,0,0.6); /*color de fondo negro con una transparencia de 0.6*/
 	color: #FFFFFF; /*color de letras blancas*/
 	margin: auto;  /*margen automatico*/
+	border-radius: 50%;
 
 }
 
@@ -33,15 +34,18 @@
 	border-top: 1px solid #FFFFFF;  /*le doy formato a la linea*/
 }
 
-/*todo lo que este dentro de sombra y sea h1 o p*/
+.ewk_sombra img{
+	size: 8vw;
+}
+/*todo lo que este dentro de sombra y sea h1, h2 o p*/
 
-.ewk_sombra h1{
-	font-size: 8vw;  /*se redimenciona a medida que cambia el tama;o de la pantalla*/
+.ewk_sombra h1 h2{
+	font-size: 8vw;  /*se redimenciona a medida que cambia el tamano de la pantalla*/
 	margin-bottom: 10px; /*margen hacia el elemento inferior*/
 }
 
 .ewk_sombra p{
-	font-size: 4vw;  /*se redimenciona a medida que cambia el tama;o de la pantalla*/
+	font-size: 4vw;  /*se redimenciona a medida que cambia el tamano de la pantalla*/
 	margin-bottom: 10px; /*margen hacia el elemento inferior*/
 }
 
@@ -75,6 +79,7 @@
 	animation: ewk_keyframes_aparecer_de_arriba 1s; /*nombre de la clase y duracion*/
 	-webkit-animation: ewk_keyframes_aparecer_de_arriba 1s; /*para que funcione en otros navegadores*/
 	animation-fill-mode: forwards; /*modo de animacion se mantenga mediante forwards*/
+	border-radius: 50%;
 }
 /*es la misma clase pero tiene un delay de 0.5 s para que genere el efecto de transicion*/
 .ewk_banner_link_1{
@@ -83,6 +88,7 @@
 	-webkit-animation: ewk_keyframes_aparecer_de_arriba 1s; /*para que funcione en otros navegadores*/
 	animation-fill-mode: forwards; /*modo de animacion se mantenga mediante forwards*/
 	animation-delay: 0.5s;
+	border-radius: 50%;
 }
 /*al igual que el anterior pero con 1 s de delay, Y asi tendria que hacer por cada enlace que agregue*/
 .ewk_banner_link_2{
@@ -91,8 +97,10 @@
 	-webkit-animation: ewk_keyframes_aparecer_de_arriba 1s; /*para que funcione en otros navegadores*/
 	animation-fill-mode: forwards; /*modo de animacion se mantenga mediante forwards*/
 	animation-delay: 1s;
+	border-radius: 50%;
 }
 
+/*modifica el diseno de la ventana de desplazamiento*/
 .ewk_cont_banner_sec_3{
 	height: 100vh;
 	background-attachment: fixed;
@@ -100,19 +108,72 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-image: url("../img/fondo2.jpg");
-	position:; relative;
+	position: relative;
 	padding: 10%;
 	margin-top: 200px;
 	margin-bottom: 100px;
+	border-radius: 25%;
 }
 
+/*modifica el diseno del cuadro de sombra*/
 .ewk_cont_banner_sec_3 .row{
 	background-color: rgba(1,1,1,0.7);
 	color: #FFFFFF;
 	padding: 2%;
+	border-radius: 20px;
 }
 
 .ewk_cont_img{
 	padding: 5%;
 	text-align: center;
+}
+
+/*modifica el diseno de la ventana de desplazamiento*/
+
+.ewk_cont_banner_sec_4{
+	height: 100vh;  /*alto del contenedor va a tomar el alto de la pantalla sin importar el dispositivo*/
+	background-attachment: fixed; /*indicamos que la imagen quede fija en el fondo*/
+	background-position: center;  /*indicamos que la imagen de fondo quede centrada*/
+	background-repeat: no-repeat; /*indicar que la imagen de fondo no se repeat*/
+	background-size: cover; /*que tome el valor original de la imagen*/
+	background-image: url("../img/fondo.png"); /*cargamos la imagen*/
+	position: relative;
+	/*padding: 10%;
+	margin-top: 200px;
+	margin-bottom: 100px;*/
+}
+
+/*da formato al fromulario de contacto*/
+.ewk_cont_form{
+	text-align: center !important;
+	margin: 15px;
+	position: relative; /*todos los elementos no salen del elemento padre*/
+	font-size: 8px;  /*asigna el tamano de la fuente en general*/
+}
+
+.ewk_cont_form p{
+	font-size: 2.5em;  /*asigna el tamano de la fuente en relacion al tamano de la pantalla*/
+	text-align: left;
+}
+
+/*modifica el diseno del cuadro de sombra de contacto*/
+.ewk_sombra_4 {
+	position: absolute;  /*posicion absoluta es decir flotante*/
+	left: 50%;  /*desde la izaquierda flote 50%*/
+	top: 50%; /*desde arriba flote un 50%*/
+	-ms-transform: translate(-50%,-50%); /*estos atributos sirve para que nuestra pag se vean en otros navegadores*/
+	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%); /*que se traslade un 50% de izq a der, y un 50% de arriba hacia abajo*/
+	padding: 20px; /*que el contenido se separen del contenedor 20px*/
+	width: 80%; /*ancho del sombreado sea de un 80% del total de la pantalla*/
+	text-align: center;
+	background-color: rgba(0,0,0,0.6);
+	color: #FFFFFF;*/
+	margin: auto;
+	border-radius: 50%;
+}
+
+.ewk_cont_banner_sec_2 p{  /*seccion de las herramientas*/
+	color: #000000;
+	font-size: 20px;
 }
